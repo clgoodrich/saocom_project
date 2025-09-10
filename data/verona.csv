@@ -1,4 +1,3 @@
-Options for time series generation. Name: verona || Nr of images:  39 || Nr of Replicas:   || Motion: No || Seasonal component: No || Zero Reference: No || Model Line: No,,,,,,,,
 ID,SVET,LVET,LAT,LON,HEIGHT,HEIGHT WRT DEM,SIGMA HEIGHT,COHER
 18399,1139,2192,45.528873,11.194304,-442.8,-442.8,1.9516074,0.75
 9942,1040,1386,45.505012,11.1928,-391,-391,1.9138908,0.76

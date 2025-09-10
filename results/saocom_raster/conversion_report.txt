@@ -1,0 +1,14 @@
+SAOCOM CSV TO RASTER CONVERSION REPORT
+==================================================
+
+Input CSV: data/verona.csv
+Output raster: results\saocom_raster\saocom_dem_utm32n_10m.tif
+Target CRS: EPSG:32632 (UTM Zone 32N)
+Resolution: 10 meters
+Interpolation: linear
+Coherence threshold: 0.3
+
+Points processed: 21533
+Raster dimensions: 959 x 918 pixels
+Coverage area: 9.6 x 9.2 km
+Valid pixels: 529224/880362
