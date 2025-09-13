@@ -30,8 +30,6 @@ def read_saocom_csv(csv_path, coherence_threshold=0.3):
     geopandas.GeoDataFrame
         Projected point data in EPSG:32632
     """
-
-
     # Try to read CSV - handle different separators and formats
     with open(csv_path, 'r') as f:
         first_line = f.readline()
@@ -43,16 +41,13 @@ def read_saocom_csv(csv_path, coherence_threshold=0.3):
     else:
         separator = r'\s+'
     try:
-        # First, peek at the file to determine format
         # Read the data
         df = pd.read_csv(csv_path, sep=separator)
-
     except:
         # Fallback: assume standard column names
         columns = ['ID', 'SVET', 'LVET', 'LAT', 'LON', 'HEIGHT',
                   'HEIGHT_WRT_DEM', 'SIGMA_HEIGHT', 'COHER']
         df = pd.read_csv(csv_path, sep=separator, names=columns, skiprows=1)
-
     # Standardize column names (handle variations)
     column_mapping = {
         'LAT': 'LAT', 'LATITUDE': 'LAT', 'lat': 'LAT',
@@ -76,9 +71,7 @@ def read_saocom_csv(csv_path, coherence_threshold=0.3):
 
     # Apply coherence filter if available
     if 'COHER' in df.columns:
-        original_count = len(df)
         df = df[df['COHER'] >= coherence_threshold]
-        removed = original_count - len(df)
 
     # Create GeoDataFrame
     geometry = [Point(lon, lat) for lon, lat in zip(df['LON'], df['LAT'])]
@@ -123,6 +116,7 @@ def points_to_raster(gdf, resolution=10, method='linear', buffer=500):
     # Calculate grid dimensions
     width = int((maxx - minx) / resolution)
     height = int((maxy - miny) / resolution)
+
     # Create coordinate grids
     x = np.linspace(minx, maxx, width)
     y = np.linspace(miny, maxy, height)
@@ -140,8 +134,6 @@ def points_to_raster(gdf, resolution=10, method='linear', buffer=500):
 
     # Create transform
     transform = from_bounds(minx, miny, maxx, maxy, width, height)
-
-
     return grid_z, transform, (minx, miny, maxx, maxy)
 
 def save_raster(array, transform, output_path, crs='EPSG:32632', nodata=-9999):
@@ -185,6 +177,7 @@ def plot_conversion_results(gdf, raster_array, transform, output_dir):
     """
     Create visualization of conversion results
     """
+
     fig, axes = plt.subplots(1, 3, figsize=(18, 6))
 
     # Plot 1: Original points
@@ -245,6 +238,7 @@ def main():
     # Create output directory
     config['output_dir'].mkdir(parents=True, exist_ok=True)
 
+    # Step 1: Read and project CSV data
     gdf = read_saocom_csv(
         config['input_csv'],
         coherence_threshold=config['coherence_threshold']
@@ -254,6 +248,7 @@ def main():
     points_output = config['output_dir'] / "saocom_points_utm32n.gpkg"
     gdf.to_file(points_output, driver="GPKG")
 
+    # Step 2: Convert to raster
     raster_array, transform, bounds = points_to_raster(
         gdf,
         resolution=config['resolution'],
@@ -261,13 +256,13 @@ def main():
         buffer=config['buffer']
     )
 
+    # Step 3: Save raster
     raster_output = config['output_dir'] / f"saocom_dem_utm32n_{config['resolution']}m.tif"
     save_raster(raster_array, transform, raster_output)
 
-
+    # Step 4: Create visualization
     plot_conversion_results(gdf, raster_array, transform, config['output_dir'])
 
-    report_path = config['output_dir'] / "conversion_report.txt"
 
 
 if __name__ == "__main__":
