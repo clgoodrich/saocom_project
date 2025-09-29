@@ -11,5 +11,3 @@ Reference dataset coverage:
 Multi-reference points:
   >=2 references: 64,153 points (96.1%)
   All references: 64,153 points (96.1%)
-
-Land cover coverage: 66,416 points (99.4%)
