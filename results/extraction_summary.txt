@@ -1,0 +1,10 @@
+SAOCOM Point-to-Pixel Extraction Summary
+==================================================
+
+Total SAOCOM points: 66,791
+Extraction method: Direct pixel sampling (NO INTERPOLATION)
+
+Reference dataset coverage:
+  copernicus_height: 66,791 points (100.0%)
+
+Multi-reference points:

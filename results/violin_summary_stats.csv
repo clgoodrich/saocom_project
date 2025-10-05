@@ -1,0 +1,3 @@
+Comparison,N Points,Mean,Median,Std Dev,RMSE,Range
+SAOCOM - TINITALY,"66,791",+5.53 m,-0.14 m,74.78 m,74.98 m,"[-860.5, 551.0] m"
+SAOCOM - Copernicus,"66,791",+4.31 m,-0.16 m,73.86 m,73.99 m,"[-860.8, 551.8] m"
