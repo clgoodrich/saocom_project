@@ -1,2 +1,31 @@
-data/U2018_CLC2018_V2020_20u1.tif
+# Ignore large raw data by default except sample clips
+/data/raw/full/
+/data/interim/
+/data/processed/
+/outputs/
+
+# Allow committed samples
+!data/raw/sample/
+
+# Project-specific patterns
 *.tif
+*.tif.*
+*.ovr
+*.dbf
+*.cpg
+*.aux.xml
+*.lock
+*.rar
+*.pptx
+*.docx
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE settings
+.idea/
+.vscode/
