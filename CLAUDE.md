@@ -1,173 +1,174 @@
-# CLAUDE.md
+This document guides Claude Code when assisting with this repository. It preserves the outcomes we care about while allowing creative exploration in how those outcomes are achieved.
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+0) Modes & Priorities
+Modes
 
-## Project Overview
+Core Mode (safe, deterministic) — Use when modifying production code paths or preparing release artifacts.
 
-SAOCOM DEM Validation Study - A geospatial analysis project that validates SAOCOM satellite InSAR-derived height measurements against reference Digital Elevation Models (DEMs). The project performs statistical comparison, outlier detection, land cover analysis, and comprehensive visualization of height discrepancies across different terrain types.
+Creative Mode (explore, iterate) — Use for proposing/refactoring methods that might improve speed, accuracy, or clarity. New ideas live under experiments/ unless and until they pass the Outcome Contract.
 
-## Data Architecture
+Claude defaults to Creative Mode unless the task is explicitly labeled production-critical (release, grading, publication draft). When in doubt, start creative but publish Core-compatible outputs.
 
-### Input Data Structure
+Instruction Hierarchy
 
-All data files are stored in the `data/` directory and are clipped to the same spatial extent (EPSG:4326):
+Outcome Contract (Section 1)
 
-- **SAOCOM InSAR Heights** (`data/saocom_csv/`): CSV format, 10m resolution
-  - Contains extracted heights from SAOCOM satellite imagery
-  - Heights are relative and require reference point calibration
-  - Negative values may exist before calibration
+Data & Paths (Section 2)
 
-- **Reference DEMs**:
-  - **Copernicus DEM** (`data/copernicus.tif`, `data/demCOP30.tif`): 30m resolution
-  - **TINItaly DEM** (`data/tinitaly/tinitaly_crop.tif`): 10m resolution, high-accuracy reference
+Guardrails (Section 6)
 
-- **Land Cover Data** (`data/corine/`, `data/ground_cover/`):
-  - CORINE Land Cover classification (30m resolution)
-  - DBF lookup table for land cover class definitions
+Everything else is flexible (use judgment; ask via NEED_INFO if blocked)
 
-- **Sentinel-2 Imagery** (`data/sentinel_data/`): RGB orthoimagery for visualization
+Rule of thumb: If creativity threatens the Outcome Contract or data integrity, switch to Core Mode.
 
-### Output Directories
+1) Outcome Contract (Non-negotiable)
 
-- `results/`: Analysis outputs and processed datasets
-- `images/`: Visualization outputs and figures
-- `docs/`: Project documentation and presentations
-- `topography_outputs/`: Terrain derivative analyses
+Claude must deliver the same types of outcomes and folders no matter the method:
 
-## Main Analysis Workflow
+Primary Notebook: saocom_v3.ipynb runs top-to-bottom without reordering and completes without exceptions.
 
-The primary analysis is contained in `saocom_v3.ipynb`. The workflow follows these steps:
+Required Artifacts (same names/locations unless agreed via CHANGE_PROPOSAL):
 
-1. **Setup & Data Loading**
-   - Load SAOCOM CSV data and filter spatial outliers
-   - Load reference DEMs (Copernicus, TINItaly)
-   - Verify horizontal datum consistency
+results/ — processed tables/grids/caches used in figures & stats
 
-2. **Geometric Processing**
-   - Resample reference DEMs to 10m resolution for consistency
-   - Create rasterized mask from SAOCOM point convex hull
-   - Sample reference DEM values at SAOCOM point locations
+images/ — residual maps, hist/violin, Bland–Altman, 3D terrain
 
-3. **Height Calibration**
-   - SAOCOM heights are relative - must be calibrated to reference DEM
-   - Calibration typically uses median offset correction
+docs/ — documentation/slides
 
-4. **Outlier Detection**
-   - Isolation Forest algorithm for anomaly detection
-   - IQR-based filtering of residuals
-   - Spatial clustering analysis (KNN-based isolated point removal)
+topography_outputs/ — slope/aspect/curvature derivatives
 
-5. **Land Cover Analysis**
-   - Sample CORINE land cover at SAOCOM point locations
-   - Classify into hierarchical levels (Level 1, 2, 3)
-   - Calculate statistics per land cover class
+Core Metrics are present and interpretable for both global and stratified views:
 
-6. **Statistical Comparison**
-   - Compute residuals: SAOCOM - Reference DEM
-   - Calculate NMAD (Normalized Median Absolute Deviation)
-   - Generate summary statistics per terrain type
+Bias, NMAD, RMSE of residuals = SAOCOM − Reference DEM
 
-7. **Visualization**
-   - Spatial maps: residuals, overlays, classification
-   - Statistical plots: violin plots, histograms, scatter plots
-   - Bland-Altman plots for systematic bias analysis
-   - 3D terrain models
+Stratification by slope, aspect, elevation, land cover
 
-## Running the Analysis
+Calibration happens before residual computation (SAOCOM heights are relative).
 
-### Environment Setup
+Outlier handling precedes final stats/plots (method is flexible).
 
-The project uses a Python virtual environment (`.venv/`). Key dependencies:
+CRS/transform correctness is explicit and validated; no silent reprojections.
 
-**Geospatial:**
-- `rasterio` - Raster I/O and processing
-- `geopandas` - Vector data manipulation
-- `shapely` - Geometric operations
-- `pyproj` - Coordinate reference system transformations
+If a creative change deviates (e.g., new filenames), Claude must include a CHANGE_PROPOSAL and a compatibility shim so saocom_v3.ipynb still runs unchanged.
 
-**Data Analysis:**
-- `numpy`, `pandas` - Array and dataframe operations
-- `scipy` - Statistical analysis and interpolation
-- `scikit-learn` - Machine learning (outlier detection)
+2) Data & Paths (Authoritative)
 
-**Visualization:**
-- `matplotlib` - Static plotting
-- `seaborn` - Statistical visualizations
-- `plotly` - Interactive 3D visualizations
-- `matplotlib-scalebar` - Map scale bars
+All inputs share a common spatial extent in EPSG:4326 (WGS84).
 
-**Other:**
-- `dbfread` - DBF file parsing for land cover lookup
+Inputs
 
-### Running the Notebook
+data/saocom_csv/ — SAOCOM point CSVs (10 m spacing), relative heights
 
-```bash
-# Activate virtual environment
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+data/copernicus.tif, data/demCOP30.tif — Copernicus DEM (30 m)
 
-# Launch Jupyter
-jupyter notebook saocom_v3.ipynb
-```
+data/tinitaly/tinitaly_crop.tif — TINItaly DEM (10 m)
 
-Execute cells sequentially. The notebook is designed to run top-to-bottom without cell reordering.
+data/corine/, data/ground_cover/ — CORINE rasters (~30 m) + DBF lookup
 
-## Key Utility Functions
+data/sentinel_data/ — Sentinel-2 RGB for visualization
 
-The notebook defines reusable functions for common operations:
+Outputs
 
-### Raster Operations
-- `_read_raster_meta(path)` - Extract raster metadata
-- `_resample_to_10m(src_path, out_name)` - Resample DEM to 10m
-- `_mask_and_write(arr, out_name)` - Apply mask and write raster
-- `_sample(arr)` - Sample raster at SAOCOM point locations
+results/, images/, docs/, topography_outputs/
 
-### Statistical Functions
-- `nmad(x)` - Calculate Normalized Median Absolute Deviation
-- `calculate_height_stats(data, name)` - Comprehensive height statistics
-- `generate_height_statistics_summary(gdf, gdf_name)` - Summary statistics table
+Primary workflow: saocom_v3.ipynb (must remain runnable)
 
-### Outlier Detection
-- `score_outliers_isolation_forest(gdf, residual_col, **kwargs)` - Isolation Forest scoring
-- `filter_by_score_iqr(gdf_scored, iqr_multiplier)` - IQR-based outlier filtering
-- `remove_isolated_knn(gdf, k, distance_threshold)` - Remove spatially isolated points
+Creative freedom: You may add experiments/ and scripts/ subtrees; do not alter data/ in place.
 
-### Calibration
-- `_calibrate(ref_col, out_col)` - Calibrate SAOCOM heights to reference DEM
+3) Pipeline Summary (What, not How)
 
-### Visualization
-- `visualize_outlier_results(gdf_original, gdf_cleaned, outliers, residual_col)` - Outlier detection visualization
-- `create_difference_grid(gdf, height_col, ref_col, grid_shape, transform, hull_mask)` - Gridded difference maps
-- `plot_bland_altman(ax, x_data, y_data, x_label, y_label, title)` - Bland-Altman plot
-- `calculate_terrain_derivatives(dem, cellsize)` - Slope, aspect, curvature
+Claude is free to change how steps are implemented if the outcomes remain. The canonical sequence is:
 
-### Land Cover
-- `get_clc_level1(code)` - Extract Level 1 CORINE class from code
+Load & QC (outlier-ish coordinates, datum checks)
 
-## Important Notes
+Geometric prep (resample to 10 m if needed, convex-hull mask, sample DEM at points)
 
-### SAOCOM Height Calibration
-InSAR heights from SAOCOM are **relative, not absolute**. Before any analysis:
-1. Select a stable reference point or region
-2. Calculate offset between SAOCOM and reference DEM
-3. Apply calibration offset to all SAOCOM points
+Calibrate SAOCOM to reference (median offset or proposed variant)
 
-The notebook typically uses median offset correction for calibration.
+Outlier handling (Isolation Forest/IQR/KNN—or a creative combo)
 
-### Coordinate Reference Systems
-- All input data uses **EPSG:4326** (WGS84 lat/lon)
-- Vertical datum may differ between datasets - verify before analysis
-- The notebook includes horizontal datum verification steps
+Land cover sampling & hierarchy (Level 1/2/3)
 
-### Data Processing Order
-The notebook cells must be run sequentially. Key dependencies:
-- Cell 4 loads reference DEMs (used by later cells)
-- Calibration must occur before residual analysis
-- Outlier detection should precede final statistical analysis
+Residual stats (Bias/NMAD/RMSE, stratified by terrain & land cover)
 
-### Memory Considerations
-- Large rasters (Sentinel-2, CORINE) may consume significant memory
-- The notebook includes optimizations like data clipping and resampling
-- Consider clearing outputs if encountering memory issues
+Visualizations (maps/plots/Bland–Altman/3D)
 
-### Missing Dependencies
-If encountering import errors, check that all required packages are installed in `.venv`. The notebook does not include a `requirements.txt` - dependencies must be inferred from imports.
+Creative freedom: propose alternative estimators (e.g., Huber, Theil–Sen), robust resampling/stacking strategies, or better plots—so long as the Outcome Contract is met.
+
+4) Creative Exploration Tracks
+
+Track A — Canonical
+Leaves existing functions/API intact. Improves internals (vectorization, memory, readability, stability).
+
+Track B — Experimental
+New methods, heuristics, or libraries go to experiments/<slug>/. Include:
+
+README.md (what/why/how)
+
+*_experiment.ipynb or script.py
+
+RESULT_PARITY.json (see Section 5)
+
+Any generated figures in experiments/<slug>/images/
+
+Claude may propose promotion of Track B work into production only if it passes Result Parity and does not degrade usability.
+
+5) Result Parity (Promotion Gate)
+
+To move an experiment into production, meet these minimums versus the current Canonical run:
+
+Functional parity: All required artifacts produced; notebook runs clean.
+
+Metric parity or improvement:
+
+NMAD: ≤ baseline + 2% (or lower is better)
+
+RMSE: ≤ baseline + 2% (or lower is better)
+
+Bias: absolute value ≤ baseline + 2% (or closer to 0 is better)
+
+Visual parity: All expected plots exist and render without clipped extents or axis errors.
+
+Runtime: Not > 2× baseline unless justified by material accuracy gains.
+
+Record baseline vs candidate in experiments/<slug>/RESULT_PARITY.json.
+
+6) Guardrails (Minimal, but Firm)
+
+MUST
+
+Keep CRS and Affine transform explicit; verify before writing outputs.
+
+Use np.nan in memory for NODATA; preserve file NODATA on write.
+
+Avoid destructive edits to data/. Write new artifacts to results/, images/, experiments/.
+
+Calibrate before residuals; filter outliers before final stats/plots.
+
+SHOULD (soft constraints; may deviate with rationale)
+
+Prefer pure functions; pass crs, transform, nodata, grid_shape.
+
+Log resampling kernels (DEM: bilinear/cubic; labels: nearest/mode).
+
+Provide seeds for randomness in Canonical runs. In Creative runs, you may explore unseeded sweeps but record seeds for chosen candidates.
+
+7) Flexibility Charter
+
+Claude has explicit permission to:
+
+Swap out outlier methods (e.g., LOF, DBSCAN) if Result Parity holds.
+
+Improve visual storytelling (ridge plots, hexbin density, small multiples).
+
+Add acceleration (vectorized ops, chunked raster reads, dask/polars) under experiments/ first.
+
+Suggest new dependencies via CHANGE_PROPOSAL (with install lines + portability notes).
+
+Refactor modules as long as public function names used by the notebook remain stable—or supply a shim and a CHANGE_PROPOSAL.
+
+8) Communication Blocks (Structured, but Lighter)
+
+Claude should use these blocks as needed (combine when useful):
+
+ACTION_PLAN
