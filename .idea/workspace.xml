@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.claude/settings.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/.claude/settings.local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/saocom_project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL_FIXES_SUMMARY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUGFIX_load_dem_array.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DATA_COLUMNS_REFERENCE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINAL_STATUS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIXES_COMPLETE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LAND_COVER_FIXES_SUMMARY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAP_FIXES_COMPLETE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTEBOOK_GUIDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QA_COMPLETE_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QA_FINAL_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QA_NEW_VISUALIZATIONS_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QA_TEST_RESULTS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QUICK_FIX_GUIDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_COMPLETE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/REFACTORING_GUIDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/REMAINING_FIXES_COMPLETE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VISUALIZATIONS_ADDED.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WORK_SUMMARY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_land_cover_fixes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_more_visualizations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_visualizations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_script.py.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_final_notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean_script.py.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extracted_imports.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_check.py.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix_all_map_issues.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix_gridded_comparison.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix_remaining_map_issues.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebook_structure_analysis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/png_search_results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qa_new_visualizations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saocom_analysis_complete.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saocom_complete_part1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplify_gridded_comparison.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp_cell78.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_complete_notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_critical_cells.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_execution.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="adding_in_slope" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;clgoodrich&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/clgoodrich/saocom_project.git&quot;,
+    &quot;accountId&quot;: &quot;cda2fb4a-c620-4e22-b042-a8ff5d51fe09&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="32KjQ0h6RmjF2n1mogAW9l04TvE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.check_data_format.executor&quot;: &quot;Run&quot;,
+    &quot;Python.developt ppt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_process.executor&quot;: &quot;Run&quot;,
+    &quot;Python.saocom_csv_to_raster.executor&quot;: &quot;Run&quot;,
+    &quot;Python.week2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.week2_alignment (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.week2_coordinate_alignment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.week_2_run (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.week_2_run.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/colto/Documents/GitHub/saocom_project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\colto\Documents\GitHub\saocom_project" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\colto\Documents\GitHub\saocom_project" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.developt ppt">
+    <configuration name="developt ppt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="saocom_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/developt ppt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="saocom_csv_to_raster" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="saocom_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/saocom_csv_to_raster.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="week2_alignment (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="saocom_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week2_alignment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="week2_coordinate_alignment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="saocom_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week2_coordinate_alignment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="week_2_run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="saocom_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week_2_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.developt ppt" />
+        <item itemvalue="Python.saocom_csv_to_raster" />
+        <item itemvalue="Python.week2_alignment (1)" />
+        <item itemvalue="Python.week2_coordinate_alignment" />
+        <item itemvalue="Python.week_2_run (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.515" />
+        <option value="bundled-python-sdk-7e47963ff851-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.515" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="" />
+      <created>1757176137270</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757176137270</updated>
+      <workItem from="1757176138500" duration="391000" />
+      <workItem from="1757176656622" duration="13724000" />
+      <workItem from="1757517138014" duration="2104000" />
+      <workItem from="1757859196422" duration="4408000" />
+      <workItem from="1757864467340" duration="19872000" />
+      <workItem from="1758052194900" duration="3061000" />
+      <workItem from="1758142497635" duration="3741000" />
+      <workItem from="1758380634702" duration="11082000" />
+      <workItem from="1758424002350" duration="46324000" />
+      <workItem from="1758663201275" duration="17375000" />
+      <workItem from="1759065336657" duration="18005000" />
+      <workItem from="1759084069965" duration="12138000" />
+      <workItem from="1759104361157" duration="29726000" />
+      <workItem from="1759417002082" duration="29050000" />
+      <workItem from="1759634364058" duration="1628000" />
+      <workItem from="1759640690014" duration="32474000" />
+      <workItem from="1759779022611" duration="1095000" />
+      <workItem from="1759780137981" duration="2132000" />
+      <workItem from="1759783563286" duration="5831000" />
+      <workItem from="1759844121272" duration="2023000" />
+      <workItem from="1759846195642" duration="1398000" />
+      <workItem from="1759847623909" duration="5010000" />
+      <workItem from="1759928226255" duration="8208000" />
+      <workItem from="1760108994832" duration="17409000" />
+      <workItem from="1760127176789" duration="5901000" />
+      <workItem from="1760280466757" duration="29907000" />
+      <workItem from="1760623804649" duration="1478000" />
+      <workItem from="1760632487939" duration="1606000" />
+      <workItem from="1760662298588" duration="293000" />
+      <workItem from="1760675638165" duration="4641000" />
+      <workItem from="1760791272953" duration="11304000" />
+      <workItem from="1760833397466" duration="760000" />
+      <workItem from="1760884659746" duration="4857000" />
+      <workItem from="1760930705936" duration="13335000" />
+      <workItem from="1761060760425" duration="7918000" />
+      <workItem from="1761495907768" duration="4923000" />
+      <workItem from="1761507885635" duration="1664000" />
+      <workItem from="1761521786869" duration="89000" />
+      <workItem from="1761521954070" duration="12452000" />
+      <workItem from="1761577429891" duration="4301000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/saocom_project$saocom_csv_to_raster.coverage" NAME="saocom_csv_to_raster Coverage Results" MODIFIED="1757182839401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/saocom_project$week2.coverage" NAME="week2 Coverage Results" MODIFIED="1757178900755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/saocom_project$week_2_run__1_.coverage" NAME="week_2_run (1) Coverage Results" MODIFIED="1757180063453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main_saocon_ipynb$saocom_csv_to_raster.coverage" NAME="saocom_csv_to_raster Coverage Results" MODIFIED="1760140200673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main_saocon_ipynb$developt_ppt.coverage" NAME="developt ppt Coverage Results" MODIFIED="1761570994810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/saocom_project$main_process.coverage" NAME="main_process Coverage Results" MODIFIED="1757178283984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/saocom_project$week2_alignment__1_.coverage" NAME="week2_alignment (1) Coverage Results" MODIFIED="1757182117649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/saocom_project$week_2_run.coverage" NAME="week_2_run Coverage Results" MODIFIED="1757179490500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/saocom_project$check_data_format.coverage" NAME="check_data_format Coverage Results" MODIFIED="1757180003973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/saocom_project$week2_coordinate_alignment.coverage" NAME="week2_coordinate_alignment Coverage Results" MODIFIED="1757180487607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

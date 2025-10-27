@@ -1,0 +1,44 @@
+# Display slope raster
+fig, ax = plt.subplots(figsize=(12, 10))
+
+# Plot slope
+# Calculate extent from transform
+extent = [
+    target_transform.c,  # left (min x)
+    target_transform.c + target_transform.a * grid_width,  # right (max x)
+    target_transform.f + target_transform.e * grid_height,  # bottom (min y)
+    target_transform.f  # top (max y)
+]
+
+slope_plot = ax.imshow(slope_tin, cmap='terrain', vmin=0, vmax=45,
+                       extent=extent, origin='upper')
+cbar = plt.colorbar(slope_plot, ax=ax, label='Slope (degrees)')
+cbar.ax.tick_params(labelsize=10)
+
+ax.set_title('Terrain Slope from TINItaly DEM', fontsize=14, fontweight='bold')
+# Add map elements
+ax.set_xlabel('Column (pixels)', fontsize=10)
+ax.set_ylabel('Row (pixels)', fontsize=10)
+ax.grid(True, alpha=0.2, color='white')
+
+# Add scale bar
+from matplotlib_scalebar.scalebar import ScaleBar
+scalebar = ScaleBar(10, 'm', length_fraction=0.25, location='lower right',
+                    box_alpha=0.7, scale_loc='top')
+ax.add_artist(scalebar)
+
+# Add north arrow
+ax.annotate('N', xy=(0.95, 0.95), xycoords='axes fraction',
+            fontsize=20, fontweight='bold', ha='center', va='center',
+            bbox=dict(boxstyle='circle', facecolor='white', edgecolor='black', linewidth=2))
+ax.annotate('↑', xy=(0.95, 0.92), xycoords='axes fraction',
+            fontsize=30, ha='center', va='center')
+
+plt.tight_layout()
+plt.savefig(IMAGES_DIR / 'terrain_slope.png', dpi=300, bbox_inches='tight')
+plt.show()
+
+print(f"Slope statistics:")
+print(f"  Mean: {np.nanmean(slope_tin):.1f}°")
+print(f"  Median: {np.nanmedian(slope_tin):.1f}°")
+print(f"  Max: {np.nanmax(slope_tin):.1f}°")
