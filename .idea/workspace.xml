@@ -7,7 +7,6 @@
     <list default="true" id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="edited file directories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saocom_analysis_clean.ipynb.backup" beforeDir="false" afterPath="$PROJECT_DIR$/saocom_analysis_clean.ipynb.backup" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;385477c0&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/colto/Documents/GitHub/saocom_project&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -265,7 +264,7 @@
       <workItem from="1761507885635" duration="1664000" />
       <workItem from="1761521786869" duration="89000" />
       <workItem from="1761521954070" duration="12452000" />
-      <workItem from="1761577429891" duration="13306000" />
+      <workItem from="1761577429891" duration="9509000" />
     </task>
     <task id="LOCAL-00001" summary="edited file directories">
       <option name="closed" value="true" />
