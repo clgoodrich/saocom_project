@@ -7,43 +7,9 @@
     <list default="true" id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="edited file directories">
       <change beforePath="$PROJECT_DIR$/.claude/settings.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/.claude/settings.local.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_archive/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/_archive/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/.~lock.verona.csv#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GLO30.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Graph.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Height_rdc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TemporalCoh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tfw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.aux.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.ovr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.vat.cpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.vat.dbf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/copernicus.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/copernicus.tif.aux.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/corine_clip.tfw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/corine_clip.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/corine_clip.tif.aux.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/corine_clip.tif.vat.cpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/corine_clip.tif.vat.dbf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif.aux.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif.vat.cpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif.vat.dbf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif.vat.dbf.LAPTOP2.33412.33768.sr.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lidar.tif.aux.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif.aux.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif.vat.cpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif.vat.dbf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif.vat.dbf.LAPTOP2.33412.33768.sr.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/verona.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/verona_fullGraph_weighted_Tcoh07_edited.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/verona_v2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/w50065_s10.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/w50065_s10_crop.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +267,7 @@
       <workItem from="1761507885635" duration="1664000" />
       <workItem from="1761521786869" duration="89000" />
       <workItem from="1761521954070" duration="12452000" />
-      <workItem from="1761577429891" duration="7730000" />
+      <workItem from="1761577429891" duration="9509000" />
     </task>
     <task id="LOCAL-00001" summary="edited file directories">
       <option name="closed" value="true" />
