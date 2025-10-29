@@ -4,58 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="">
+    <list default="true" id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="edited file directories">
       <change beforePath="$PROJECT_DIR$/.claude/settings.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/.claude/settings.local.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/saocom_project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL_FIXES_SUMMARY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BUGFIX_load_dem_array.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATA_COLUMNS_REFERENCE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FINAL_STATUS.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIXES_COMPLETE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LAND_COVER_FIXES_SUMMARY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAP_FIXES_COMPLETE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTEBOOK_GUIDE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_COMPLETE_REPORT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_FINAL_REPORT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_NEW_VISUALIZATIONS_REPORT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_TEST_RESULTS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QUICK_FIX_GUIDE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_COMPLETE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REFACTORING_GUIDE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REMAINING_FIXES_COMPLETE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VISUALIZATIONS_ADDED.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WORK_SUMMARY.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_land_cover_fixes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_more_visualizations.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_visualizations.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis_script.py.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_final_notebook.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clean_script.py.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extracted_imports.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_check.py.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fix_all_map_issues.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fix_gridded_comparison.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fix_remaining_map_issues.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook_structure_analysis.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/png_search_results.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qa_new_visualizations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_archive/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/_archive/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/.~lock.verona.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GLO30.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Graph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Height_rdc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TemporalCoh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tfw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.aux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.ovr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.vat.cpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.vat.dbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/U2018_CLC2018_V2020_20u1.tif.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/copernicus.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/copernicus.tif.aux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/corine_clip.tfw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/corine_clip.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/corine_clip.tif.aux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/corine_clip.tif.vat.cpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/corine_clip.tif.vat.dbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif.aux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif.vat.cpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif.vat.dbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lclu_crop.tif.vat.dbf.LAPTOP2.33412.33768.sr.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lidar.tif.aux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif.aux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif.vat.cpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif.vat.dbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lidar_crop.tif.vat.dbf.LAPTOP2.33412.33768.sr.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/verona.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/verona_fullGraph_weighted_Tcoh07_edited.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/verona_v2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/w50065_s10.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/w50065_s10_crop.tif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saocom_analysis_complete.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saocom_complete_part1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simplify_gridded_comparison.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp_cell78.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_complete_notebook.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_critical_cells.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_execution.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +108,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -312,12 +301,33 @@
       <workItem from="1761507885635" duration="1664000" />
       <workItem from="1761521786869" duration="89000" />
       <workItem from="1761521954070" duration="12452000" />
-      <workItem from="1761577429891" duration="4301000" />
+      <workItem from="1761577429891" duration="7730000" />
     </task>
+    <task id="LOCAL-00001" summary="edited file directories">
+      <option name="closed" value="true" />
+      <created>1761582018290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761582018290</updated>
+    </task>
+    <task id="LOCAL-00002" summary="edited file directories">
+      <option name="closed" value="true" />
+      <created>1761582077111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761582077111</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="edited file directories" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited file directories" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/saocom_project$saocom_csv_to_raster.coverage" NAME="saocom_csv_to_raster Coverage Results" MODIFIED="1757182839401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

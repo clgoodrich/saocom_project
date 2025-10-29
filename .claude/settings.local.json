@@ -5,7 +5,9 @@
       "Bash(.venvScriptspython.exe -c \"import json; nb = json.load(open(''''saocom_v3.ipynb'''')); cells = nb[''''cells'''']; [print(f''''Cell {i}: {repr(cell[\"\"source\"\"][:100]) if cell.get(\"\"source\"\") else \"\"empty\"\"}'''') for i, cell in enumerate(cells)]\")",
       "Bash(python:*)",
       "Bash(mkdir:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(md5sum:*)",
+      "Bash(gdalinfo:*)"
     ],
     "deny": [],
     "ask": []

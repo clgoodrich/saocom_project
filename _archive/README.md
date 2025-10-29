@@ -74,6 +74,18 @@ Draft presentations and documents:
 - `o3 Text.docx` - Draft document
 - `week2.docx` - Weekly notes/assignment
 
+### `old_data/` - Archived Data Files
+Duplicate and superseded data files:
+- **duplicates/** - Files that existed in both data/ root and subfolders
+  - `copernicus.tif`, `GLO30.tif` - Duplicate Copernicus DEM files
+  - `corine_clip.tif` + metadata - Duplicate CORINE files
+  - `w50065_s10.tif`, `w50065_s10_crop.tif` - Duplicate TINItaly files
+- **old_csv_versions/** - Superseded SAOCOM CSV versions
+  - `verona.csv`, `verona_v2.csv`, `verona_fullGraph_weighted_Tcoh07_edited.csv`
+- **reference_images/** - Original reference images
+  - `Graph.jpg`, `Height_rdc.jpg`, `TemporalCoh.jpg`
+- `data.rar` - Original compressed data archive (12 MB)
+
 ## Restoration
 
 If you need to reference or restore any of these files:
