@@ -6,6 +6,40 @@
   <component name="ChangeListManager">
     <list default="true" id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="edited file directories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/accuracy_by_detailed_land_cover.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/accuracy_by_detailed_land_cover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/accuracy_by_elevation.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/accuracy_by_elevation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/accuracy_by_landcover.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/accuracy_by_landcover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bland_altman.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/bland_altman.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/control_points_sentinel_overlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/control_points_sentinel_overlay.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/coverage_and_voids.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/coverage_and_voids.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gridded_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/gridded_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hexbin_density.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/hexbin_density.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hist2d_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/hist2d_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Beaches,_dunes,_sands.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Beaches,_dunes,_sands.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Broad-leaved_forest.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Broad-leaved_forest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Complex_cultivation_patterns.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Complex_cultivation_patterns.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Discontinuous_urban_fabric.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Discontinuous_urban_fabric.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Land_principally_occupied_by_agriculture,_with_significant_areas_of_natural_vegetation.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Land_principally_occupied_by_agriculture,_with_significant_areas_of_natural_vegetation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Olive_groves.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Olive_groves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Pastures.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Pastures.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Vineyards.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Vineyards.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_histograms.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_histograms.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_map.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_vs_terrain.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_vs_terrain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reference_dem_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/reference_dem_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/residuals_vs_coherence.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/residuals_vs_coherence.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/scatter_comparisons.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/scatter_comparisons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/spatial_coverage.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/spatial_coverage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/spatial_residuals.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/spatial_residuals.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/summary_dashboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/summary_dashboard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/terrain_slope.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/terrain_slope.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/violin_plot_slope.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/violin_plot_slope.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/control_points/control_points.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/control_points/control_points.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/control_points/control_points.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/results/control_points/control_points.geojson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saocom_cleaned.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/results/saocom_cleaned.dbf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saocom_cleaned.shp" beforeDir="false" afterPath="$PROJECT_DIR$/results/saocom_cleaned.shp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saocom_cleaned.shx" beforeDir="false" afterPath="$PROJECT_DIR$/results/saocom_cleaned.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/validation_summary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/validation_summary.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +97,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;385477c0&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refix__new__cells&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/colto/Documents/GitHub/saocom_project&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
