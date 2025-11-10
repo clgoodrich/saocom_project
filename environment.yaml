@@ -18,7 +18,7 @@ dependencies:
   - pyproj>=3.5.0
   - gdal>=3.6.0
 
-  # Machine learning
+  # Machine learning & PCA
   - scikit-learn>=1.3.0
 
   # Visualization

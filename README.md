@@ -161,6 +161,7 @@ All inputs must share a common spatial extent.
 6. **Radar Geometry Analysis**: Calculate local incidence angles, identify shadow/layover areas
 7. **Residual Analysis**: Compute Bias/NMAD/RMSE stratified by terrain, land cover, and geometry
 8. **Visualization**: Generate maps, plots, Bland-Altman, 3D terrain views
+9. **PCA Void Zone Analysis**: Principal component analysis to identify factors contributing to data quality issues and void zones
 
 ## Output Artifacts
 
@@ -311,4 +312,64 @@ SAOCOM accuracy at control points:
 - **±5.0m**: Loose (50-70% of points)
 
 Choose based on your accuracy requirements and terrain complexity.
+
+## 🔬 PCA Void Zone Analysis
+
+New advanced analysis feature for understanding data quality patterns!
+
+### What It Does
+
+- **Identifies void zones** based on multiple quality criteria:
+  - Low coherence (< 0.5)
+  - Shadow areas
+  - High residuals (top 10%)
+  - High outlier scores (top 10%)
+
+- **Analyzes contributing factors**:
+  - Temporal coherence (COHER)
+  - Terrain slope and aspect
+  - Elevation
+  - Outlier scores
+  - Height residuals
+  - Height uncertainty (SIGMA HEIGHT)
+  - Local incidence angles
+  - Geometric quality metrics
+  - Land cover types (one-hot encoded)
+
+- **Principal Component Analysis** reduces dimensions and identifies:
+  - Which factors most strongly associate with void zones
+  - How different features correlate
+  - Patterns in the high-dimensional feature space
+
+### Visualizations Generated
+
+The analysis produces a comprehensive 5x2 grid figure with:
+1. **Scree plot** - Variance explained by each principal component
+2. **Feature contributions** - Bar chart of PC1 loadings
+3. **Component loadings heatmap** - All features across all PCs
+4. **PC scatter plots** - PC1 vs PC2, PC1 vs PC3, PC2 vs PC3 (void zones highlighted)
+5. **Distribution comparisons** - PC1 and PC2 distributions for void vs non-void
+6. **Summary statistics** - Key findings and recommendations
+
+### Typical Insights
+
+```
+Top 3 Features Contributing to Void Zones:
+1. COHER (coherence): -0.512 loading
+2. slope_tin: +0.387 loading
+3. outlier_score: +0.341 loading
+
+First 3 PCs explain ~65% of variance
+Void zones show 2.5σ separation in PC1 space
+```
+
+### Output
+
+- Saved figure: `images/pca_void_zone_analysis.png`
+- Console output with detailed statistics and recommendations
+- PC scores added to dataframe for further analysis
+
+### Location in Notebook
+
+Section 13 in `saocom_analysis_clean.ipynb` (cells 97-100)
 
