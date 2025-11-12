@@ -1,19 +1,226 @@
 # SAOCOM DEM Validation Project
 
-A comprehensive validation analysis of SAOCOM-derived Digital Elevation Models (DEMs) against reference DEMs (Copernicus DEM and TINItaly), incorporating terrain characteristics and land cover analysis.
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Project Overview
+> Comprehensive validation analysis of SAOCOM-derived Digital Elevation Models (DEMs) against reference DEMs with advanced terrain, land cover, and radar geometry analysis.
 
-This project validates SAOCOM radar-derived elevation data against high-quality reference DEMs, analyzing residuals stratified by:
-- Terrain characteristics (slope, aspect, elevation, curvature)
-- Land cover types (CORINE classification)
-- Radar geometry effects (shadow, layover, foreshortening)
-- Spatial patterns
+**Author:** Colton Goodrich
+**Version:** 1.1.0
+**Status:** Active Development
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Workflow](#workflow)
+- [Advanced Features](#advanced-features)
+- [Output Artifacts](#output-artifacts)
+- [Data Requirements](#data-requirements)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Citation](#citation)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## Overview
+
+This project validates SAOCOM L-band radar-derived elevation data against high-quality reference Digital Elevation Models (DEMs), providing comprehensive accuracy assessment stratified by:
+
+- **Terrain characteristics**: slope, aspect, elevation, curvature
+- **Land cover types**: CORINE classification hierarchy
+- **Radar geometry effects**: shadow, layover, foreshortening
+- **Spatial patterns**: control points and void zone analysis
 
 ### Key Metrics
+
 - **Bias**: Mean vertical error
 - **NMAD**: Normalized Median Absolute Deviation (robust accuracy measure)
 - **RMSE**: Root Mean Square Error
+
+All metrics are computed globally and stratified by terrain, land cover, and geometric quality categories.
+
+---
+
+## Features
+
+✨ **Core Capabilities:**
+- 📊 Multi-DEM validation (SAOCOM vs Copernicus vs TINItaly)
+- 🗺️ Terrain-stratified accuracy assessment
+- 🌳 Land cover classification integration (CORINE)
+- 📡 Radar geometry quality analysis
+- 🎯 Control point identification for calibration
+- 🔬 PCA-based void zone factor analysis
+- 📈 Comprehensive visualization suite
+
+🆕 **Recent Additions:**
+- Principal Component Analysis of data quality factors
+- Automated control point identification
+- Radar shadow and layover detection
+- Sentinel-2 overlay visualizations
+
+---
+
+## Installation
+
+### Prerequisites
+
+- Python 3.9 or higher
+- Conda (recommended) or pip + virtualenv
+- GDAL-compatible system libraries
+
+### Quick Install
+
+**Option 1: Conda (Recommended)**
+```bash
+conda env create -f environment.yaml && conda activate saocom-dem-validation
+```
+
+**Option 2: pip + virtualenv**
+```bash
+# Windows (Git Bash/PowerShell)
+python -m venv .venv && source .venv/Scripts/activate && pip install -r requirements.txt
+
+# Linux/Mac
+python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+```
+
+### Detailed Installation
+
+<details>
+<summary>Click to expand detailed installation instructions</summary>
+
+#### Using Conda
+
+```bash
+# Create environment from file
+conda env create -f environment.yaml
+
+# Activate environment
+conda activate saocom-dem-validation
+
+# Verify installation
+python -c "import numpy, pandas, geopandas, rasterio, sklearn; print('✓ All packages installed successfully!')"
+```
+
+#### Using pip + virtualenv
+
+```bash
+# Create virtual environment
+python -m venv .venv
+
+# Activate (Windows Git Bash/PowerShell)
+source .venv/Scripts/activate
+
+# Activate (Linux/Mac)
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Verify installation
+python -c "import numpy, pandas, geopandas, rasterio, sklearn; print('✓ All packages installed successfully!')"
+```
+
+#### Development Install
+
+```bash
+# Activate your environment first (conda or venv)
+# Then install in editable mode with dev dependencies
+pip install -e ".[dev]"
+```
+
+#### Troubleshooting
+
+**If conda is slow:**
+```bash
+# Use mamba for faster dependency resolution
+conda install mamba -c conda-forge
+mamba env create -f environment.yaml
+```
+
+**If GDAL installation fails with pip:**
+```bash
+# Install GDAL via conda even in a venv environment
+conda install -c conda-forge gdal
+# Then continue with pip for other packages
+```
+
+**To update an existing environment:**
+```bash
+# Conda
+conda env update -f environment.yaml --prune
+
+# Pip
+pip install -r requirements.txt --upgrade
+```
+
+</details>
+
+---
+
+## Quick Start
+
+1. **Install dependencies** (see [Installation](#installation))
+
+2. **Prepare your data** (see [Data Requirements](#data-requirements))
+
+3. **Launch Jupyter Notebook:**
+   ```bash
+   jupyter notebook
+   ```
+
+4. **Run the main analysis:**
+   - Open `saocom_analysis_clean.ipynb`
+   - Run all cells sequentially
+   - Results will be saved to `images/` and `results/`
+
+5. **Review outputs:**
+   - Accuracy statistics in console
+   - Visualizations in `images/`
+   - Exported data in `results/`
+
+---
+
+## Usage
+
+### Running the Main Analysis
+
+```bash
+# Start Jupyter
+jupyter notebook
+
+# Open and run:
+# - saocom_analysis_clean.ipynb (main analysis notebook)
+# - saocom_v3.ipynb (alternative workflow)
+```
+
+### Using Source Modules Programmatically
+
+```python
+from src.preprocessing import load_saocom_data, resample_to_common_grid
+from src.calibration import calibrate_heights
+from src.outlier_detection import detect_outliers_isolation_forest
+from src.statistics_prog import compute_residual_stats
+from src.visualization import plot_residual_map
+from src.radar_geometry import calculate_local_incidence_angle, identify_shadow_areas
+from src.control_points import identify_control_points, export_control_points
+
+# Example workflow
+saocom_data = load_saocom_data('data/saocom_csv/')
+calibrated = calibrate_heights(saocom_data, reference_dem)
+stats = compute_residual_stats(calibrated)
+```
+
+---
 
 ## Project Structure
 
@@ -29,14 +236,11 @@ saocom_project/
 ├── data/                              # Input data (not in version control)
 │   ├── saocom_csv/                    # SAOCOM point data (10m spacing)
 │   ├── copernicus.tif                 # Copernicus DEM (30m)
-│   ├── demCOP30.tif                   # Copernicus DEM
 │   ├── tinitaly/                      # TINItaly DEM (10m)
 │   ├── corine/                        # CORINE land cover
-│   ├── ground_cover/                  # Ground cover rasters
 │   └── sentinel_data/                 # Sentinel-2 RGB for visualization
 │
 ├── src/                               # Source code modules
-│   ├── __init__.py
 │   ├── preprocessing.py               # Data loading and geometric prep
 │   ├── calibration.py                 # Height calibration routines
 │   ├── outlier_detection.py           # Outlier filtering methods
@@ -47,329 +251,217 @@ saocom_project/
 │   ├── control_points.py              # Control point identification
 │   └── utils.py                       # Utility functions
 │
-├── notebooks/                         # Jupyter notebooks
-│   ├── radar_shadow_analysis_cells.py # Shadow analysis notebook cells
-│   ├── control_points_identification_cells.py # Control points cells
-│   └── (exploration notebooks)
-│
+├── notebooks/                         # Additional Jupyter notebooks
 ├── tests/                             # Unit tests
-│   └── __init__.py
-│
 ├── results/                           # Processed data and analysis results
-│   └── (generated tables, grids, caches)
-│
 ├── images/                            # Output figures
-│   └── (residual maps, plots, 3D terrain)
-│
-├── docs/                              # Documentation and slides
-│   ├── RADAR_SHADOW_ANALYSIS.md       # Shadow analysis documentation
-│   ├── QUICK_START_SHADOW_ANALYSIS.md # Shadow analysis quick start
-│   ├── CONTROL_POINTS_GUIDE.md        # Control points guide
-│   └── (presentations and papers)
-│
+├── docs/                              # Documentation
 ├── topography_outputs/                # Terrain derivatives
-│   └── (slope, aspect, curvature)
 │
-├── _archive/                          # Archived development files
-│   ├── scripts/                       # Old fix/test scripts
-│   ├── reports/                       # Development reports
-│   ├── old_notebooks/                 # Previous notebook versions
-│   ├── temp_files/                    # Temporary analysis files
-│   └── ide_config/                    # IDE configuration
-│
-├── saocom_analysis_clean.ipynb        # Main analysis notebook (clean)
-└── saocom_v3.ipynb                    # Primary workflow notebook
-
+├── saocom_analysis_clean.ipynb        # Main analysis notebook ⭐
+└── saocom_v3.ipynb                    # Alternative workflow notebook
 ```
 
-## Setup
+---
 
-### Option 1: Using Conda (Recommended)
+## Workflow
 
-```bash
-# Create environment from file
-conda env create -f environment.yaml
+The analysis follows a standardized 9-step pipeline:
 
-# Activate environment
-conda activate saocom-dem-validation
-```
-
-### Option 2: Using pip + virtualenv
-
-```bash
-# Create virtual environment
-python -m venv .venv
-
-# Activate (Windows Git Bash)
-source .venv/Scripts/activate
-
-# Activate (Linux/Mac)
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### Option 3: Development Install
-
-```bash
-# Install in editable mode with dev dependencies
-pip install -e ".[dev]"
-```
-
-## Usage
-
-### Running the Main Analysis
-
-```bash
-# Start Jupyter
-jupyter notebook
-
-# Open and run:
-# - saocom_analysis_clean.ipynb (cleaned analysis)
-# - saocom_v3.ipynb (primary workflow)
-```
-
-### Using Source Modules
-
-```python
-from src.preprocessing import load_saocom_data, resample_to_common_grid
-from src.calibration import calibrate_heights
-from src.outlier_detection import detect_outliers_isolation_forest
-from src.statistics_prog import compute_residual_stats
-from src.visualization import plot_residual_map
-from src.radar_geometry import calculate_local_incidence_angle, identify_shadow_areas
-from src.control_points import identify_control_points, export_control_points
-```
-
-## Data Requirements
-
-The project expects data in the following structure:
-- SAOCOM data: CSV files with point coordinates and relative heights (10m spacing)
-- Reference DEMs: GeoTIFF format, EPSG:4326 (WGS84)
-- Land cover: CORINE raster with DBF attribute table
-
-All inputs must share a common spatial extent.
-
-## Workflow Overview
-
-1. **Load & QC**: Load data, check coordinate validity and datum
-2. **Geometric Prep**: Resample to 10m common grid, create masks
-3. **Calibrate**: Apply median offset correction to SAOCOM heights
-4. **Outlier Handling**: Filter outliers using Isolation Forest/IQR/KNN
+1. **Load & QC**: Load SAOCOM points and reference DEMs, check coordinate validity
+2. **Geometric Prep**: Resample to common 10m grid, create convex hull masks
+3. **Calibrate**: Apply median offset correction to SAOCOM relative heights
+4. **Outlier Handling**: Filter outliers using Isolation Forest/IQR/KNN methods
 5. **Land Cover Sampling**: Extract CORINE classifications at point locations
-6. **Radar Geometry Analysis**: Calculate local incidence angles, identify shadow/layover areas
-7. **Residual Analysis**: Compute Bias/NMAD/RMSE stratified by terrain, land cover, and geometry
-8. **Visualization**: Generate maps, plots, Bland-Altman, 3D terrain views
-9. **PCA Void Zone Analysis**: Principal component analysis to identify factors contributing to data quality issues and void zones
+6. **Radar Geometry Analysis**: Calculate local incidence angles, identify shadow/layover
+7. **Residual Analysis**: Compute Bias/NMAD/RMSE stratified by terrain/land cover/geometry
+8. **Visualization**: Generate maps, plots, Bland-Altman diagrams, 3D terrain views
+9. **PCA Void Zone Analysis**: Identify factors contributing to poor data quality
 
-## Output Artifacts
+Each step is documented in detail within the Jupyter notebooks.
 
-- `results/`: Processed tables, grids, analysis caches
-- `images/`: Residual maps, histograms, violin plots, Bland-Altman, 3D terrain, radar geometry
-- `docs/`: Documentation and presentation materials
-- `topography_outputs/`: Slope, aspect, curvature derivatives, radar geometry layers
+---
 
-## Development
+## Advanced Features
 
-### Running Tests
+### 🔬 PCA Void Zone Analysis
 
-```bash
-pytest tests/
+Principal Component Analysis reveals which factors contribute most to data quality issues.
+
+**Void zones defined as areas with:**
+- Low coherence (< 0.5)
+- Shadow areas
+- High residuals (top 10%)
+- High outlier scores (top 10%)
+
+**Features analyzed:**
+- Temporal coherence, terrain metrics, measurement quality
+- Geometry: local incidence angles
+- Land cover: one-hot encoded categories
+
+**Output:** 5×2 grid visualization with scree plots, loadings, scatter plots, and distributions
+
+📍 **Location:** Section 13 in `saocom_analysis_clean.ipynb` (cells 97-100)
+
+---
+
+### 🎯 Control Points Identification
+
+Identifies high-quality control points where SAOCOM, Copernicus, and TINItaly all agree within ±2m.
+
+**Features:**
+- Automated consensus point identification
+- Spatial distribution analysis
+- Sentinel-2 overlay visualization
+- Export to GeoJSON, Shapefile, CSV
+
+**Typical Results:**
+```
+Control Points: 2,347 / 10,523 (22.3%)
+Mean DEM agreement: 1.12 m
+SAOCOM RMSE at control points: 2.31 m
 ```
 
-### Code Formatting
+**Tolerance Guidelines:**
+- **±2.0m**: Standard (15-30% of points) ← Recommended
+- **±1.0m**: Strict quality (5-15% of points)
+- **±3.0m**: Moderate (30-50% of points)
 
-```bash
-black src/ tests/
-flake8 src/ tests/
-```
+📖 **Documentation:** `docs/CONTROL_POINTS_GUIDE.md`
 
-## Citation
+---
 
-If you use this code or methodology, please cite:
-[Add citation information here]
+### 📡 Radar Shadow Analysis
 
-## License
+Analyzes radar geometry effects on DEM accuracy, including shadow and layover detection.
 
-[Specify license - MIT suggested in pyproject.toml]
+**Capabilities:**
+- Local incidence angle calculation
+- Shadow area identification (>90° local incidence)
+- Layover detection (<20° local incidence)
+- Geometric quality stratification
 
-## Contact
-
-[Add contact information]
-
-## Acknowledgments
-
-- Copernicus DEM: EU Copernicus Programme
-- TINItaly DEM: INGV (Istituto Nazionale di Geofisica e Vulcanologia)
-- CORINE Land Cover: European Environment Agency
-- SAOCOM: CONAE (Comisión Nacional de Actividades Espaciales)
-
-## 🆕 Radar Shadow Analysis
-
-New feature for analyzing radar geometry effects on DEM accuracy!
-
-### Quick Start
-
-1. Open your Jupyter notebook
-2. Copy cells from `notebooks/radar_shadow_analysis_cells.py`
-3. Adjust SAOCOM geometry parameters (incidence angle, azimuth)
-4. Run cells to generate shadow analysis
-
-### What It Does
-
-- **Calculates local incidence angles** accounting for terrain orientation
-- **Identifies shadow areas** where radar cannot reach (>90° local incidence)
-- **Detects layover zones** with severe geometric distortion (<20° local incidence)
-- **Stratifies accuracy** by geometric quality (Optimal, Acceptable, Foreshortening, Shadow, Layover)
-- **Visualizes results** with maps and accuracy plots
-
-### Documentation
-
-- **Full guide**: `docs/RADAR_SHADOW_ANALYSIS.md`
-- **Quick start**: `docs/QUICK_START_SHADOW_ANALYSIS.md`
-- **Module reference**: See docstrings in `src/radar_geometry.py`
-
-### Example Output
-
+**Example Output:**
 ```
 Accuracy Statistics by Illumination Category:
 Category         Count   Bias (m)   RMSE (m)   NMAD (m)
 ------------------------------------------------------------
-optimal         12456       0.23       2.45       1.82
-acceptable       8934       0.41       3.67       2.34
-steep            2103       1.12       5.48       3.91
-shadow            456       2.34       8.92       6.45
-layover           789       1.67       6.73       4.21
+optimal         12,456      0.23       2.45       1.82
+shadow             456      2.34       8.92       6.45
+layover            789      1.67       6.73       4.21
 ```
 
-Shadow areas typically show 2-3× higher RMSE compared to well-illuminated areas.
+📖 **Documentation:** `docs/RADAR_SHADOW_ANALYSIS.md`
 
+---
 
-## 🎯 Control Points Identification
+## Output Artifacts
 
-New feature for identifying high-quality control points where all DEMs agree!
+### Generated Files
 
-### Quick Start
+- **`results/`** - Processed tables, grids, analysis caches
+- **`images/`** - Residual maps, histograms, violin plots, Bland-Altman, 3D terrain
+- **`docs/`** - Documentation and presentation materials
+- **`topography_outputs/`** - Slope, aspect, curvature derivatives
 
-1. Open your Jupyter notebook
-2. Copy cells from `notebooks/control_points_identification_cells.py`
-3. Adjust tolerance parameter (default: ±2 meters)
-4. Run cells to identify and visualize control points
+### Key Visualizations
 
-### What It Does
+- Residual maps overlaid on Sentinel-2
+- Accuracy stratified by slope, land cover, geometry
+- Control points on RGB backdrop
+- PCA feature contribution analysis
+- Radar shadow and layover maps
 
-- **Identifies consensus points** where SAOCOM, Copernicus, and TINItaly agree within ±2m
-- **Analyzes spatial distribution** across terrain and land cover types
-- **Calculates accuracy metrics** specifically at control points
-- **Visualizes on Sentinel-2** showing control point locations
-- **Recommends calibration points** - spatially distributed subset for validation
-- **Exports to multiple formats** (GeoJSON, Shapefile, CSV)
+---
 
-### Why Control Points Matter
+## Data Requirements
 
-Control points represent high-confidence locations where:
-- ✅ All three DEMs agree (within tolerance)
-- ✅ Measurement quality is highest
-- ✅ Terrain is stable and well-measured
-- ✅ Ideal for calibration validation
-- ✅ Suitable for ground truth collection
+### Input Data Structure
 
-### Typical Results
+The project expects data in the following formats:
 
-```
-Control Points Identified: 2,347 / 10,523 (22.3%)
-Mean DEM agreement: 1.12 m
-SAOCOM accuracy at control points:
-  Bias: +0.18 m
-  RMSE: 2.31 m
-  NMAD: 1.67 m
-```
+- **SAOCOM data**: CSV files with columns: `LAT2`, `LON2`, `HEIGHT`, `COHER`, `SIGMA HEIGHT`
+  - Point spacing: ~10m
+  - Coordinate system: EPSG:4326 (WGS84)
 
-### Outputs
+- **Reference DEMs**: GeoTIFF format, EPSG:4326
+  - TINItaly: 10m resolution
+  - Copernicus: 30m resolution (auto-resampled to 10m)
 
-**Visualizations:**
-- `control_points_sentinel_overlay.png` - Control points on Sentinel-2 RGB
-- `control_points_analysis_dashboard.png` - 6-panel analysis figure
-- `recommended_calibration_points.png` - Distributed calibration points
+- **Land cover**: CORINE raster with DBF attribute table
+  - Resolution: ~30m
+  - Includes Level 1, 2, 3 classification codes
 
-**Data Files:**
-- `results/control_points/*.geojson` - GeoJSON format
-- `results/control_points/*.csv` - CSV with coordinates
-- `results/control_points/*.shp` - Shapefile
+- **Sentinel-2**: RGB composite GeoTIFF for visualization backdrop
 
-### Documentation
+**Important:** All inputs must share a common spatial extent.
 
-- **Full guide**: `docs/CONTROL_POINTS_GUIDE.md`
-- **Module reference**: See docstrings in `src/control_points.py`
-- **Cell examples**: `notebooks/control_points_identification_cells.py`
-
-### Tolerance Guidelines
-
-- **±1.0m**: Strict quality (5-15% of points)
-- **±2.0m**: Standard (15-30% of points) ← **Recommended**
-- **±3.0m**: Moderate (30-50% of points)
-- **±5.0m**: Loose (50-70% of points)
-
-Choose based on your accuracy requirements and terrain complexity.
-
-## 🔬 PCA Void Zone Analysis
-
-New advanced analysis feature for understanding data quality patterns!
-
-### What It Does
-
-- **Identifies void zones** based on multiple quality criteria:
-  - Low coherence (< 0.5)
-  - Shadow areas
-  - High residuals (top 10%)
-  - High outlier scores (top 10%)
-
-- **Analyzes contributing factors**:
-  - Temporal coherence (COHER)
-  - Terrain slope and aspect
-  - Elevation
-  - Outlier scores
-  - Height residuals
-  - Height uncertainty (SIGMA HEIGHT)
-  - Local incidence angles
-  - Geometric quality metrics
-  - Land cover types (one-hot encoded)
-
-- **Principal Component Analysis** reduces dimensions and identifies:
-  - Which factors most strongly associate with void zones
-  - How different features correlate
-  - Patterns in the high-dimensional feature space
-
-### Visualizations Generated
-
-The analysis produces a comprehensive 5x2 grid figure with:
-1. **Scree plot** - Variance explained by each principal component
-2. **Feature contributions** - Bar chart of PC1 loadings
-3. **Component loadings heatmap** - All features across all PCs
-4. **PC scatter plots** - PC1 vs PC2, PC1 vs PC3, PC2 vs PC3 (void zones highlighted)
-5. **Distribution comparisons** - PC1 and PC2 distributions for void vs non-void
-6. **Summary statistics** - Key findings and recommendations
-
-### Typical Insights
+### Data Directory Structure
 
 ```
-Top 3 Features Contributing to Void Zones:
-1. COHER (coherence): -0.512 loading
-2. slope_tin: +0.387 loading
-3. outlier_score: +0.341 loading
-
-First 3 PCs explain ~65% of variance
-Void zones show 2.5σ separation in PC1 space
+data/
+├── saocom_csv/
+│   └── *.csv                  # SAOCOM point measurements
+├── copernicus.tif             # Copernicus DEM
+├── tinitaly/
+│   └── tinitaly_crop.tif      # TINItaly DEM
+├── corine/
+│   ├── *.tif                  # CORINE land cover raster
+│   └── *.dbf                  # CORINE lookup table
+└── sentinel_data/
+    └── Sentinel2Views_Clip.tif  # RGB composite
 ```
 
-### Output
+---
 
-- Saved figure: `images/pca_void_zone_analysis.png`
-- Console output with detailed statistics and recommendations
-- PC scores added to dataframe for further analysis
 
-### Location in Notebook
+---
 
-Section 13 in `saocom_analysis_clean.ipynb` (cells 97-100)
+## Citation
 
+If you use this code or methodology in your research, please cite:
+
+```bibtex
+@software{goodrich2025saocom,
+  author = {Goodrich, Colton},
+  title = {SAOCOM DEM Validation Project},
+  year = {2025},
+  version = {1.1.0},
+  url = {https://github.com/clgoodrich/saocom_project}
+}
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+## Contact
+
+**Colton Goodrich**
+- GitHub: [@clgoodrich](https://github.com/clgoodrich)
+- Email: coltonlg@gmail.com
+
+For questions, issues, or collaboration opportunities, please open an issue on GitHub.
+
+---
+
+## Acknowledgments
+
+This project utilizes data and tools from:
+
+- **SAOCOM Mission**: CONAE (Comisión Nacional de Actividades Espaciales), Argentina
+- **Copernicus DEM**: European Union Copernicus Programme
+- **TINItaly DEM**: INGV (Istituto Nazionale di Geofisica e Vulcanologia), Italy
+- **CORINE Land Cover**: European Environment Agency (EEA)
+- **Sentinel-2**: ESA (European Space Agency) Copernicus Programme
+
+Special thanks to the open-source geospatial community for developing essential tools: GDAL, Rasterio, GeoPandas, scikit-learn, and Matplotlib.
+
+---
+
+**Last Updated:** 2025-01-10
+**Maintained by:** Colton Goodrich
