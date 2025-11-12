@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="edited file directories">
-      <change beforePath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="551f290e-762d-4cbf-a34c-08194f38298b" name="Changes" comment="edited file directories" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -268,7 +266,7 @@
       <workItem from="1762285377192" duration="4398000" />
       <workItem from="1762443755025" duration="10781000" />
       <workItem from="1762870234551" duration="29000" />
-      <workItem from="1762963274858" duration="2020000" />
+      <workItem from="1762963274858" duration="2374000" />
     </task>
     <task id="LOCAL-00001" summary="edited file directories">
       <option name="closed" value="true" />
