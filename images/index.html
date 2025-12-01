@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAOCOM Project Image Gallery</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 1.5rem;
+      background: #0b0c10;
+      color: #e5e7eb;
+    }
+    header {
+      max-width: 960px;
+      margin: 0 auto 1rem;
+    }
+    h1 {
+      margin: 0 0 0.25rem 0;
+      font-size: clamp(1.5rem, 2vw + 1rem, 2.6rem);
+    }
+    p.description {
+      margin: 0;
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      max-width: 1400px;
+      margin: 1.5rem auto;
+      padding: 0;
+      list-style: none;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6px);
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      background: #111827;
+    }
+    .card figcaption {
+      padding: 0.75rem 1rem 1rem;
+      font-size: 0.95rem;
+      color: #f3f4f6;
+    }
+    .card a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      max-width: 960px;
+      margin: 2rem auto 0;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    a { color: #93c5fd; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SAOCOM Project Image Gallery</h1>
+    <p class="description">Interactive overview of the figures stored in <code>images/</code>. All assets are loaded from the local repository so you can browse them offline.</p>
+  </header>
+  <section class="grid" id="gallery" aria-live="polite" aria-label="SAOCOM gallery"></section>
+  <footer>
+    <p>To view any figure in full resolution, open it in a new tab or navigate directly to the corresponding file inside the <code>images/</code> directory.</p>
+  </footer>
+  <script>
+    const galleryData = [
+      "accuracy_by_detailed_land_cover.png",
+      "accuracy_by_elevation.png",
+      "accuracy_by_landcover.png",
+      "bland_altman.png",
+      "coverage_and_voids.png",
+      "gridded_comparison.png",
+      "hexbin_density.png",
+      "hist2d_comparison.png",
+      "land_cover_Beaches,_dunes,_sands.png",
+      "land_cover_Broad-leaved_forest.png",
+      "land_cover_Complex_cultivation_patterns.png",
+      "land_cover_Discontinuous_urban_fabric.png",
+      "land_cover_Land_principally_occupied_by_agriculture,_with_significant_areas_of_natural_vegetation.png",
+      "land_cover_Olive_groves.png",
+      "land_cover_Pastures.png",
+      "land_cover_Vineyards.png",
+      "land_cover_histograms.png",
+      "land_cover_map.png",
+      "land_cover_vs_terrain.png",
+      "pca_void_zone_analysis.png",
+      "radar_geometry_analysis.png",
+      "reference_dem_comparison.png",
+      "residual_distributions.png",
+      "residuals_vs_coherence.png",
+      "scatter_comparisons.png",
+      "spatial_coverage.png",
+      "spatial_residuals.png",
+      "summary_dashboard.png",
+      "terrain_slope.png",
+      "violin_plot_slope.png",
+    ];
+
+    const humanize = (name) => {
+      return name
+        .replace(/\.[^.]+$/, '')
+        .replace(/[_-]+/g, ' ')
+        .replace(/\b([a-z])/g, (m, chr) => chr.toUpperCase())
+        .replace(/\s+,/g, ',');
+    };
+
+    const grid = document.getElementById('gallery');
+
+    galleryData.forEach((file) => {
+      const title = humanize(file);
+      const figure = document.createElement('figure');
+      figure.className = 'card';
+
+      const link = document.createElement('a');
+      link.href = file;
+      link.title = `Open ${title}`;
+
+      const img = document.createElement('img');
+      img.src = file;
+      img.alt = title;
+      img.loading = 'lazy';
+
+      const caption = document.createElement('figcaption');
+      caption.textContent = title;
+
+      link.appendChild(img);
+      link.appendChild(caption);
+      figure.appendChild(link);
+      grid.appendChild(figure);
+    });
+
+    if (!galleryData.length) {
+      const notice = document.createElement('p');
+      notice.textContent = 'No images were found in this gallery.';
+      notice.setAttribute('role', 'status');
+      grid.appendChild(notice);
+    }
+  </script>
+</body>
+</html>
