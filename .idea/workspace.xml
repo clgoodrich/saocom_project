@@ -5,22 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b9df71c-4cde-4f48-a599-21698d826a53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/saocom_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/saocom_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/accuracy_by_detailed_land_cover.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/accuracy_by_detailed_land_cover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/accuracy_by_elevation.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/accuracy_by_elevation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/accuracy_by_landcover.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/accuracy_by_landcover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bland_altman.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/bland_altman.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/coverage_and_voids.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/coverage_and_voids.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/gridded_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/gridded_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hexbin_density.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/hexbin_density.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hist2d_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/hist2d_comparison.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/land_cover_Beaches,_dunes,_sands.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Beaches,_dunes,_sands.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Broad-leaved_forest.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Broad-leaved_forest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Complex_cultivation_patterns.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Complex_cultivation_patterns.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Discontinuous_urban_fabric.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Discontinuous_urban_fabric.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Land_principally_occupied_by_agriculture,_with_significant_areas_of_natural_vegetation.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Land_principally_occupied_by_agriculture,_with_significant_areas_of_natural_vegetation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Olive_groves.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Olive_groves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Pastures.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Pastures.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_Vineyards.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_Vineyards.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_histograms.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_histograms.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/land_cover_map.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/land_cover_vs_terrain.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/land_cover_vs_terrain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/north_arrow_style.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/images/pca_void_zone_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/pca_void_zone_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/radar_geometry_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/radar_geometry_analysis.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/reference_dem_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/reference_dem_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/residual_distributions.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/residual_distributions.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/residuals_vs_coherence.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/residuals_vs_coherence.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/scatter_comparisons.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/scatter_comparisons.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/spatial_coverage.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/spatial_coverage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/spatial_residuals.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/spatial_residuals.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/summary_dashboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/summary_dashboard.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/terrain_slope.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/terrain_slope.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/violin_plot_slope.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/violin_plot_slope.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/copernicus_10m.tif" beforeDir="false" afterPath="$PROJECT_DIR$/results/copernicus_10m.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/difference_by_coherence.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/difference_by_coherence.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/saocom_cleaned.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/results/saocom_cleaned.dbf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saocom_cleaned.shp" beforeDir="false" afterPath="$PROJECT_DIR$/results/saocom_cleaned.shp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saocom_cleaned.shx" beforeDir="false" afterPath="$PROJECT_DIR$/results/saocom_cleaned.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/tinitaly_10m.tif" beforeDir="false" afterPath="$PROJECT_DIR$/results/tinitaly_10m.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/validation_summary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/validation_summary.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/saocom_analysis_clean.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/outlier_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/outlier_detection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +62,25 @@
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="8fd902a07f2592335ad12089092f46c3edc1fc92" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;clgoodrich&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/clgoodrich/saocom_project.git&quot;,
+    &quot;accountId&quot;: &quot;bdc54225-3ac5-4764-b73a-f111faef4016&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -49,6 +95,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/colto/Documents/GitHub/saocom_project/saocom_project&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -75,6 +122,10 @@
       <workItem from="1763991407852" duration="3446000" />
       <workItem from="1764007974712" duration="5328000" />
       <workItem from="1764606890748" duration="1418000" />
+      <workItem from="1764872324866" duration="86000" />
+      <workItem from="1764872464212" duration="13899000" />
+      <workItem from="1764952785964" duration="831000" />
+      <workItem from="1765151980324" duration="2204000" />
     </task>
     <servers />
   </component>
