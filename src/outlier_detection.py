@@ -210,14 +210,15 @@ def visualize_outlier_results(gdf_original, gdf_cleaned, outliers, residual_col,
     results_dir.mkdir(exist_ok=True)
 
     # Create figure
-    fig, (ax1, ax2) = plt.subplots(
-        1, 2,
-        figsize=(20, 9),
-        facecolor='white',
-        gridspec_kw={'width_ratios': [1.2, 1]}
-    )
-
+    # fig, (ax1, ax2) = plt.subplots(
+    #     1, 2,
+    #     figsize=(20, 9),
+    #     facecolor='white',
+    #     gridspec_kw={'width_ratios': [1.2, 1]}
+    # )
+    fig, ax1 = plt.subplots(figsize=(8, 6))
     # Spatial map
+
     vmin, vmax = np.nanpercentile(gdf_cleaned[residual_col].values, [2, 98])
 
     sc = ax1.scatter(
@@ -225,7 +226,7 @@ def visualize_outlier_results(gdf_original, gdf_cleaned, outliers, residual_col,
         gdf_cleaned.geometry.y.values,
         c=gdf_cleaned[residual_col].values,
         cmap='RdBu_r',
-        s=5,
+        s=2,
         vmin=vmin,
         vmax=vmax,
         alpha=0.8,
@@ -275,6 +276,12 @@ def visualize_outlier_results(gdf_original, gdf_cleaned, outliers, residual_col,
     bins_orig = calculate_bins(orig, max_bins=80)
     bins_cln = calculate_bins(cln, max_bins=60)
 
+    plt.tight_layout()
+    fig.savefig(results_dir / "spatial_distribution_of_cleaned_data_and_outliers.png", dpi=300,
+                bbox_inches='tight')
+    plt.show()
+
+    fig, ax2 = plt.subplots(figsize=(8, 6))
     # Plot with proper colors and alpha
     ax2.hist(orig, bins=bins_orig, alpha=0.6, label=f'Before (n={orig.size:,})',
              color='gray', edgecolor='black', linewidth=0.5)
@@ -291,6 +298,6 @@ def visualize_outlier_results(gdf_original, gdf_cleaned, outliers, residual_col,
     ax2.grid(True, linestyle='--', alpha=0.4)
 
     plt.tight_layout()
-    fig.savefig(results_dir / "difference_by_coherence.png", dpi=300,
+    fig.savefig(results_dir / "residual_distribution_before_and_after_cleaning.png", dpi=300,
                 bbox_inches='tight')
     plt.show()

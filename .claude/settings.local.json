@@ -1,11 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(tree:*)",
       "Bash(find:*)",
-      "Bash(python:*)",
-      "Bash(pip install:*)",
-      "Bash(ls:*)"
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
