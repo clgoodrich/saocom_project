@@ -210,3 +210,6 @@ marimo/_lsp/
 __marimo__/
 >>>>>>> e13920335db9c4d6efe2f99fc7548c75bc13f86e
 *.zip
+nul
+.idea/workspace.xml
+.idea/workspace.xml
